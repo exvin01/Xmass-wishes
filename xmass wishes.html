@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>MERRY CHRISTMAS 🎄</title>
+  <style>
+    body {
+      background-color: #1e90ff;
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      color: #fff;
+      padding: 20px;
+    }
+    h1 {
+      color: #ff0000;
+      text-shadow: 2px 2px #fff;
+      font-size: 50px;
+    }
+    code {
+      color: #ffff00;
+      font-size: 18px;
+    }
+    select, input {
+      padding: 10px;
+      border-radius: 10px;
+      border: 2px solid #ff0000;
+      font-size: 16px;
+    }
+    button {
+      background-color: #ff0000;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    button:hover {
+      background-color: #00ff00;
+    }
+    #message {
+      font-size: 24px;
+      color: #ffff00;
+      text-shadow: 1px 1px #000;
+      margin-top: 20px;
+      white-space: pre;
+    }
+  </style>
+</head>
+<body>
+  <h1>XMAS WISHES 🎁</h1>
+  <div id="form">
+    <code>SELECT YOUR SCHOOL NAME 🎓</code>
+    <br>
+    <select id="school">
+      <option value="NEW LEA">NEW LEA</option>
+      <option value="NEW KARONGA">NEW KARONGA</option>
+    </select>
+    <br>
+    <code>ENTER YOUR NAME 🎅</code>
+    <br>
+    <input type="text" id="name" placeholder="eg: exvin">
+    <p id="p" style="color: red;"></p>
+    <br><br>
+    <button onclick="showMessage()">GET WISHES 🎄</button>
+  </div>
+  <br><br>
+  <img src="https:                                                                                     
+  <div id="message"></div>
+  <p id="p1"></p>
+
+  <script>
+    const school = document.getElementById('school');
+    const name = document.getElementById('name');
+    const form = document.getElementById('form');
+    const p1 = document.getElementById('p1');
+    const p = document.getElementById('p');
+
+    function showMessage() {
+      const names = name.value;
+      const schools = school.value;
+      if (names === '') {
+        p.textContent = `Please enter your name`;
+      } else {
+        form.style.display = 'none';
+        const message = `⭐⭐⭐ Welcome ${names} from ${schools} ⭐⭐⭐\nSir Exvin Chipwere is wishing you Merry Christmas 🎄!\nSee u on 5 January 😊`;
+        p1.textContent = message;
+      }
+    }
+  </script>
+</body>
+</html>
